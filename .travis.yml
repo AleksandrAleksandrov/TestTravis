@@ -32,8 +32,6 @@ before_install:
 #- openssl aes-256-cbc -K $encrypted_key -in gallery_key.keystore.enc -out gallery_key.keystore -d
 - chmod +x gradlew
 - yes | sdkmanager "platforms;android-22"
-#after_success:
-#- sh set_tags.sh
 before_deploy:
   # Set up git user name and tag this commit
   - git config --local user.name "AleksandrAleksandrov"
@@ -42,11 +40,11 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: "juk/nOVaXl1H2P3reCoXtznoJOycfVf0tvkxsxWddawdHv8ZVZ95RKVu4ZDFvNyNSkCP2lvaITcJhwLya9rFa/zCbnlAZMys6wnos8CqGTw9G1xFaYSAz4aNHFwtsxSX6dCm6CWWcGp6LLOPQCyagg12k9kejxOtnlvqU29i+nGc9GaR/XFBB4QG09ZnQcZFdgXEaIHGnjQiSuZHku4pcDwfCHnfrHdMCDB6Ty8FrDqisomAwd4Eq8Xb0yo4P4uif0unvbi/XrFiKN21fWLkuoKr2iIIlH6XYAjOflNHxos94srzVpjTs4vMb31mVc/cVqT46KPQxURu4npU6fqrqr6lTRmvZtBPqBIUT6qXqvgYux4Bpj2P0GWaUjW7SBhA32YQ0m92y+JdS2tIEtARcFSHHNaTx4822/Cqqd+97aDmKzYYuZvs8bt/mZeFmkt4fkMJ0m8Bar1T2d1plFcZw7+pbWWEwltkPkRc/cjxCIHUwYxwwjkE6xQsfBVV81Od5voL2xFKIgu1D1Bg9BQ52+WuCZc36V+gBOsLGg+F8Fki9j9NubD8DcOEOai1sYc+sB+OdQ+DWMiPX0lKQ6ImxlkUQNQvPfoei61v+ZRNVkpreNcEugtZxj3WlFvrr2EK/gJL8maCNMO7lvK+eeCStNBBmTOR8aLM3P4D0JWFyFo="
-  file: "app/build/outputs/apk/*/**.apk"
+    secure: gRFrB7PPLr1Co/fvWTOB15ePKFJZqsIDejfYshgwnO+oXHBDFmb9MCK2yj1J3LsTEFeSKnf/O+C++3JLiUhAfPilS+keTDRHFXjsIJwu0G5R2sjUNjAxTZYka2sxim5YiyUnTXtZuxnyTxq1htppKOY64RkjGit6YvSqcFVN5/4hyA2dzlbMB0BMN2xrBa5f1evMgmEYNPt0cEezzOGfTZpZxxCIEKcKgoJgUvu9YDBi7Z+ik/SJ4kB2HpkO8EUYP+Q9EiOhxA2NHkZtrxCCroudIqXcnhboOypAjeEu+LWmGZ/yil0o9NXTwg4JUTTX9mz01rVNXypNvy5NV7E/KnIhBuZtgck3CKsJ8P8Dz1DW3WZUhRzrKX4prqMrLjAslf0rLaFIV6O8fzre+4P3m+1HDnslniAE9xEpHTIMLXlwv9pQVUeaDUNazB+GyWTB7mg4TF7adnQTKf6iqGLpQ0qOUe6mSsjobFddgiQSzWPeJ7yi3p7aqzlANdsRr4BhT7ux3kxCyah7AQogVsR2y8icyZ3Y7BWV2U52tLf3X4NvnFRolLvUm3iz+2uDbJuGjNBwRiUFXruFCmsrlcROwegScFk/PeuYiHtRNqVEQyD+NoE/+WVHa2NsvJevtE6/c7/prK8yfcRC4dtmoJwMe4Q2gSfExIVR0stVoheXa0g=
+  file: "*.apk"
   skip_cleanup: "true"
   file_glob: "true"
   skip_cleanup: true
   on:
     branch: master
-    repo: AleksandrAleksandrov/PhotoGallery
+    repo: AleksandrAleksandrov/TestTravis
