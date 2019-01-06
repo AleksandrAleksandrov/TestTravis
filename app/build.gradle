@@ -22,6 +22,10 @@ android {
         }
     }
 
+    signingConfigs {
+        release
+    }
+
     def isRunningOnTravis = System.getenv("CI") == "true"
 
     if (isRunningOnTravis) {
