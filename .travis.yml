@@ -41,7 +41,7 @@ deploy:
   provider: releases
   api_key:
     secure: gRFrB7PPLr1Co/fvWTOB15ePKFJZqsIDejfYshgwnO+oXHBDFmb9MCK2yj1J3LsTEFeSKnf/O+C++3JLiUhAfPilS+keTDRHFXjsIJwu0G5R2sjUNjAxTZYka2sxim5YiyUnTXtZuxnyTxq1htppKOY64RkjGit6YvSqcFVN5/4hyA2dzlbMB0BMN2xrBa5f1evMgmEYNPt0cEezzOGfTZpZxxCIEKcKgoJgUvu9YDBi7Z+ik/SJ4kB2HpkO8EUYP+Q9EiOhxA2NHkZtrxCCroudIqXcnhboOypAjeEu+LWmGZ/yil0o9NXTwg4JUTTX9mz01rVNXypNvy5NV7E/KnIhBuZtgck3CKsJ8P8Dz1DW3WZUhRzrKX4prqMrLjAslf0rLaFIV6O8fzre+4P3m+1HDnslniAE9xEpHTIMLXlwv9pQVUeaDUNazB+GyWTB7mg4TF7adnQTKf6iqGLpQ0qOUe6mSsjobFddgiQSzWPeJ7yi3p7aqzlANdsRr4BhT7ux3kxCyah7AQogVsR2y8icyZ3Y7BWV2U52tLf3X4NvnFRolLvUm3iz+2uDbJuGjNBwRiUFXruFCmsrlcROwegScFk/PeuYiHtRNqVEQyD+NoE/+WVHa2NsvJevtE6/c7/prK8yfcRC4dtmoJwMe4Q2gSfExIVR0stVoheXa0g=
-  file: "*.apk"
+  file: "app/build/outputs/apk/*/**.apk"
   skip_cleanup: "true"
   file_glob: "true"
   skip_cleanup: true
